@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Add Employee</h2>
+<form method="POST" class="post-form">
+    <table class="table">
+        {% csrf_token %} <!--security check to make sure the request is legitimate-->
+        {{ form.as_table }} <!--django's built in template for forms-->
+    </table>
+
+    <button type="submit" class="save btn btn-default">Save</button>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>{{ rvw.reviewtitle }}</h2>
+<p>Date: {{ rvw.reviewdate }} </p>
+<p>Rating: {{ rvw.reviewrating }} </p>
+<p>Employee: {{ rvw.reviewemployee }}</p>
+<p>Company: {{ rvw.reviewcompany }}</p>
+<p>Description: {{ rvw.reviewdescription }}</p>
+<p>User: {{ rvw.user }}</p>
+
+{% endblock %}

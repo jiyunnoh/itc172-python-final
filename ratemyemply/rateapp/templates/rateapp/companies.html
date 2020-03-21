@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Company list</h1>
+<table class='table'>
+ <tr>
+     <th>Name</th>
+     <th>Type</th>
+ </tr>
+ {% for c in companies_list %}
+   <tr>
+       <td><a href="{% url 'companydetails' id=c.id %}">{{ c.companyname }}</a></td>
+       <td>{{ c.companytype }}</td>
+   </tr>
+
+ {% endfor %}
+
+</table>
+
+{% endblock %}

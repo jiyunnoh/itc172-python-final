@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Employee list</h1>
+<table class='table'>
+ <tr>
+     <th>Name</th>
+     <th>Position</th>
+     <th>Company</th>
+ </tr>
+ {% for e in employees_list %}
+   <tr>
+       <td><a href="{% url 'employeedetails' id=e.id %}">{{ e.employeename }}</a></td>
+       <td>{{ e.employeeposition }}</td>
+       <td>{{ e.employeecompany }}</td>
+   </tr>
+
+ {% endfor %}
+
+</table>
+
+{% endblock %}
